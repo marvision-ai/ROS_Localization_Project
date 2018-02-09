@@ -1,0 +1,8 @@
+prefix=/home/robond/ROS_Localization_Project/devel
+
+Name: turtlebot_description
+Description: Description of turtlebot_description
+Version: 2.4.2
+Cflags: 
+Libs: -L/home/robond/ROS_Localization_Project/devel/lib 
+Requires: urdf xacro

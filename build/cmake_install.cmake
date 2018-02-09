@@ -117,7 +117,12 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/robond/ROS_Localization_Project/build/gtest/cmake_install.cmake")
+  include("/home/robond/ROS_Localization_Project/build/turtlebot/turtlebot/cmake_install.cmake")
+  include("/home/robond/ROS_Localization_Project/build/turtlebot/turtlebot_bringup/cmake_install.cmake")
+  include("/home/robond/ROS_Localization_Project/build/turtlebot/turtlebot_capabilities/cmake_install.cmake")
   include("/home/robond/ROS_Localization_Project/build/udacity_bot/cmake_install.cmake")
+  include("/home/robond/ROS_Localization_Project/build/turtlebot/turtlebot_teleop/cmake_install.cmake")
+  include("/home/robond/ROS_Localization_Project/build/turtlebot/turtlebot_description/cmake_install.cmake")
 
 endif()
 

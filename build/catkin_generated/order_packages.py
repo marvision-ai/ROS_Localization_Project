@@ -2,4 +2,4 @@
 source_root_dir = "/home/robond/ROS_Localization_Project/src"
 whitelisted_packages = "".split(';') if "" != "" else []
 blacklisted_packages = "".split(';') if "" != "" else []
-underlay_workspaces = "/opt/ros/kinetic".split(';') if "/opt/ros/kinetic" != "" else []
+underlay_workspaces = "/home/robond/ROS_Localization_Project/devel;/opt/ros/kinetic".split(';') if "/home/robond/ROS_Localization_Project/devel;/opt/ros/kinetic" != "" else []
