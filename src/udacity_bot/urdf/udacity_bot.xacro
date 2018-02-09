@@ -1,7 +1,10 @@
 <?xml version='1.0'?>
 
 <robot name="udacity_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
-
+	<!-- Make sure the xacro model loads all the Plugins (differential controller, camera, hokuyo laser scanner) for the gazebo model-->
+	<xacro:include filename="$(find udacity_bot)/urdf/udacity_bot.gazebo" />
+	
+	<!-- init the robot footprint -->
   <link name="robot_footprint"></link>
 
   <joint name="robot_footprint_joint" type="fixed">
