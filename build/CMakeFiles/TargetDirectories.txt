@@ -19,3 +19,11 @@
 /home/robond/ROS_Localization_Project/build/gtest/CMakeFiles/gtest_main.dir
 /home/robond/ROS_Localization_Project/build/gtest/CMakeFiles/install/strip.dir
 /home/robond/ROS_Localization_Project/build/gtest/CMakeFiles/install/local.dir
+/home/robond/ROS_Localization_Project/build/udacity_bot/CMakeFiles/rebuild_cache.dir
+/home/robond/ROS_Localization_Project/build/udacity_bot/CMakeFiles/edit_cache.dir
+/home/robond/ROS_Localization_Project/build/udacity_bot/CMakeFiles/list_install_components.dir
+/home/robond/ROS_Localization_Project/build/udacity_bot/CMakeFiles/install.dir
+/home/robond/ROS_Localization_Project/build/udacity_bot/CMakeFiles/_catkin_empty_exported_target.dir
+/home/robond/ROS_Localization_Project/build/udacity_bot/CMakeFiles/install/local.dir
+/home/robond/ROS_Localization_Project/build/udacity_bot/CMakeFiles/install/strip.dir
+/home/robond/ROS_Localization_Project/build/udacity_bot/CMakeFiles/test.dir

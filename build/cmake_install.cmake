@@ -117,6 +117,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/robond/ROS_Localization_Project/build/gtest/cmake_install.cmake")
+  include("/home/robond/ROS_Localization_Project/build/udacity_bot/cmake_install.cmake")
 
 endif()
 
