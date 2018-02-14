@@ -16,9 +16,11 @@
     <param name="odom_model_type" value="diff-corrected"/>
     <param name="base_frame_id" value="robot_footprint"/>
     <param name="global_frame_id" value="map"/>
-	<!-- Creating an AMCL yaml parameter file for tuning -->
+    
+    <!-- Creating an AMCL yaml parameter file for tuning -->
     <rosparam file="$(find udacity_bot)/config/amcl.yaml" command="load" />
   </node>
+	
 <!-- Move base -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
     <rosparam file="$(find udacity_bot)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
