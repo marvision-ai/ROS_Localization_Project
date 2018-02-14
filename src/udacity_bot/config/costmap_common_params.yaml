@@ -1,6 +1,7 @@
 #
 # The navigation stack uses costmaps to store information about obstacles in the world. 
 # In order to do this properly, we'll need to point the costmaps at the sensor topics they should listen to for updates.
+# http://wiki.ros.org/navigation/Tutorials/RobotSetup
 #
 
 map_type: costmap
