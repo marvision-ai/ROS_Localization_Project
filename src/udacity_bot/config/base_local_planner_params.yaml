@@ -20,7 +20,6 @@ TrajectoryPlannerROS:
   acc_lim_x: 2.5                  # (double, default: 2.5) The x acceleration limit of the robot in meters/sec^2
   acc_lim_y: 2.5                  # (double, default: 2.5) The y acceleration limit of the robot in meters/sec^2
   
-  
   # Goal Tolerance Parameters
   yaw_goal_tolerance: 0.05        # (double, default: 0.05) The tolerance in radians for the controller in yaw/rotation when achieving its goal 
   xy_goal_tolerance : 0.05        # (double, default: 0.10) The tolerance in meters for the controller in the x & y distance when achieving a goal 
