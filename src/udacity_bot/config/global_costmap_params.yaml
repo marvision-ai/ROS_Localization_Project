@@ -9,8 +9,8 @@
 global_costmap:
    global_frame: /map                   # what coordinate frame the costmap should run in, in this case, we'll choose the /map frame
    robot_base_frame: robot_footprint   # the coordinate frame the costmap should reference for the base of the robot
-   update_frequency: 10.0              # the frequency, in Hz, at which the costmap will run its update loop
-   publish_frequency: 10.0             # The frequency in Hz for the map to be publish display information.
+   update_frequency: 50.0              # the frequency, in Hz, at which the costmap will run its update loop
+   publish_frequency: 50.0             # The frequency in Hz for the map to be publish display information.
    width: 50.0                         # Width of global cost map in meters.
    height: 50.0                        # The height of the map in meters.
    resolution: 0.02                    # The resolution of the map in meters/cell. Hokuyo URG-04LX-UG01 laser scanner has metric resolution of 0.01mm
