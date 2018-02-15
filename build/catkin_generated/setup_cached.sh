@@ -7,4 +7,10 @@
 # new environment variables
 
 # modified environment variables
+export CMAKE_PREFIX_PATH="/home/robond/ROS_Localization_Project/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/robond/ROS_Localization_Project/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/robond/ROS_Localization_Project/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/robond/ROS_Localization_Project/build"
+export PYTHONPATH="/home/robond/ROS_Localization_Project/devel/lib/python2.7/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/robond/ROS_Localization_Project/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/robond/ROS_Localization_Project/src:$ROS_PACKAGE_PATH"

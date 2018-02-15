@@ -14,9 +14,9 @@ raytrace_range: 8.0            # (double, default 3.0) The default range in mete
 # the center of the robot is assumed to be at (0.0, 0.0) and both clockwise and counterclockwise specifications are supported. 
 # We'll also set the inflation radius for the costmap. The inflation radius should be set to the maximum distance from obstacles at which a cost should be incurred. 
 # For example, setting the inflation radius at 0.55 meters means that the robot will treat all paths that stay 0.55 meters or more away from obstacles as having equal obstacle cost.
-footprint: [[x0, y0], [x1, y1], ... [xn, yn]]
-#robot_radius: 0.5
-inflation_radius: 0.55
+#footprint: [[x0, y0], [x1, y1], ... [xn, yn]]
+robot_radius: 0.4
+inflation_radius: 0.6
 
 # The transform_tolerance parameter sets the maximum amount of latency allowed between these transforms. If the tf tree is not updated at this expected rate, the navigation stack stops the robot.
 transform_tolerance: 1.25

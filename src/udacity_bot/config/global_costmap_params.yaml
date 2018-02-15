@@ -7,7 +7,7 @@
 # That map could come from SLAM or it could come from a source like the map_server. You shouldn't have to change the way you've configured the navigation stack to run SLAM, you'll just replace the map_server with your SLAM algorithm of choice.
 
 global_costmap:
-   global_frame: map                   # what coordinate frame the costmap should run in, in this case, we'll choose the /map frame
+   global_frame: /map                   # what coordinate frame the costmap should run in, in this case, we'll choose the /map frame
    robot_base_frame: robot_footprint   # the coordinate frame the costmap should reference for the base of the robot
    update_frequency: 10.0              # the frequency, in Hz, at which the costmap will run its update loop
    publish_frequency: 10.0             # The frequency in Hz for the map to be publish display information.

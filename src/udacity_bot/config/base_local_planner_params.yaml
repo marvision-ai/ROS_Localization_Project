@@ -6,37 +6,70 @@
 # http://wiki.ros.org/base_local_planner
 TrajectoryPlannerROS:
   
-  # Determine whether velocity commands are generated for a holonomic or non-holonomic robot.
-  holonomic_robot: false          # For holonomic robots, strafing velocity commands may be issued to the base. For non-holonomic robots, no strafing velocity commands will be issued.
-  
-  # Robot Configuration Parameters
-  max_vel_x: 0.5                  # (double, default: 0.5) The maximum forward velocity allowed for the base in meters/sec
-  min_vel_x: 0.1                  # (double, default: 0.1) The minimum forward velocity allowed for the base in meters/sec. It is useful to specify this to guarantee that velocity commands sent to a mobile base are high enough to allow the base to overcome friction.
-  max_vel_theta: 1.0              # (double, default: 1.0) The maximum rotational velocity allowed for the base in radians/sec
-  min_in_place_vel_theta: 0.4     # (double, default: 0.4) The minimum rotational velocity allowed for the base while performing in-place rotations in radians/sec
-  escape_vel: -0.3                # (double, default -0.1) Speed used for driving during escapes in meters/sec. Note that it must be negative in order for the robot to actually reverse.
-  
-  acc_lim_theta: 3.2              # (double, default: 3.2) The rotational acceleration limit of the robot in radians/sec^2
-  acc_lim_x: 2.5                  # (double, default: 2.5) The x acceleration limit of the robot in meters/sec^2
-  acc_lim_y: 2.5                  # (double, default: 2.5) The y acceleration limit of the robot in meters/sec^2
-  
-  # Goal Tolerance Parameters
-  yaw_goal_tolerance: 0.05        # (double, default: 0.05) The tolerance in radians for the controller in yaw/rotation when achieving its goal 
-  xy_goal_tolerance : 0.05        # (double, default: 0.10) The tolerance in meters for the controller in the x & y distance when achieving a goal 
-  latch_xy_goal_tolerance: false  # (bool, default: false) If goal tolerance is latched, if the robot ever reaches the goal xy location it will simply rotate in place, even if it ends up outside the goal tolerance while it is doing so. 
+# Determine whether velocity commands are generated for a holonomic or non-holonomic robot.
+# For holonomic robots, strafing velocity commands may be issued to the base. For non-holonomic robots, no strafing velocity commands will be issued.
+  holonomic_robot: false
 
-  # Forward Simulation Parameters
-  sim_time: 1.0                   # (double, default: 1.0) The amount of time to forward-simulate trajectories in seconds
-  controller_frequency: 10.0      # (double, default 20.0) The frequency at which this controller will be called in Hz. For use with move_base, this means that you only need to set its "controller_frequency" parameter and can safely leave this one unset.
-  
-  # Trajectory Scoring Parameters : The cost function used to score each trajectory is in the following form
-  meter_scoring: false            # (bool, default: false) Whether the gdist_scale and pdist_scale parameters should assume that goal_distance and path_distance are expressed in units of [meters] or [cells]. Cells are assumed by default. 
-  pdist_scale: 0.6                # (double, default: 0.6) The weighting for how much the controller should stay close to the path it was given, maximal possible value is 5.0
-  gdist_scale: 0.8                # (double, default: 0.8) The weighting for how much the controller should attempt to reach its local goal, also controls speed, maximal possible value is 5.0 
-  publish_cost_grid_pc: false     # (bool, default false) Whether or not to publish the cost grid that the planner will use when planning. 
-  heading_scoring_timestep: 1.2   # (double, default: 0.8) How far to look ahead in time in seconds along the simulated trajectory when using heading scoring
 
-  # Oscillation Prevention Parameters
-  oscillation_reset_dist: 0.1     # (double, default 0.05) How far the robot must travel in meters before oscillation flags are reset
+# 
+# Robot Configuration Parameters
+#
+# (double, default: 0.5) The maximum forward velocity allowed for the base in meters/sec 
+  max_vel_x: 0.5
+# (double, default: 0.1) The minimum forward velocity allowed for the base in meters/sec. It is useful to specify this to guarantee that velocity commands sent to a mobile base are high enough to allow the base to overcome friction
+  min_vel_x: 0.1  
+# (double, default: 1.0) The maximum rotational velocity allowed for the base in radians/sec                   
+  max_vel_theta: 1.0
+# (double, default: 0.4) The minimum rotational velocity allowed for the base while performing in-place rotations in radians/sec   
+  min_in_place_vel_theta: 0.4
+# (double, default -0.1) Speed used for driving during escapes in meters/sec. Note that it must be negative in order for the robot to actually reverse. 
+  escape_vel: -0.3
+# (double, default: 3.2) The rotational acceleration limit of the robot in radians/sec^2 	
+  acc_lim_theta: 3.2
+# (double, default: 2.5) The x acceleration limit of the robot in meters/sec^2	             
+  acc_lim_x: 2.5
+# (double, default: 2.5) The y acceleration limit of the robot in meters/sec^2	                  
+  acc_lim_y: 2.5
+  
+
+#
+# Goal Tolerance Parameters
+#
+# (double, default: 0.05) The tolerance in radians for the controller in yaw/rotation when achieving its 
+  yaw_goal_tolerance: 0.05
+# (double, default: 0.10) The tolerance in meters for the controller in the x & y distance when achieving a goal     
+  xy_goal_tolerance : 0.05
+# (bool, default: false) If goal tolerance is latched, if the robot ever reaches the goal xy location it will simply rotate in place, even if it ends up outside the goal tolerance while it is doing so. 
+  latch_xy_goal_tolerance: false  
+
+
+#
+# Forward Simulation Parameters
+#
+# (double, default: 1.0) The amount of time to forward-simulate trajectories in seconds   
+  sim_time: 1.0
+# (double, default 20.0) The frequency at which this controller will be called in Hz. For use with move_base, this means that you only need to set its "controller_frequency" parameter and can safely leave this one unset.             
+  controller_frequency: 10.0
+
+
+# 
+# Trajectory Scoring Parameters : The cost function used to score each trajectory is in the following form
+#
+# (bool, default: false) Whether the gdist_scale and pdist_scale parameters should assume that goal_distance and path_distance are expressed in units of [meters] or [cells]. Cells are assumed by default.   
+  meter_scoring: false
+# (double, default: 0.6) The weighting for how much the controller should stay close to the path it was given, maximal possible value is 5.0    
+  pdist_scale: 0.6
+# (double, default: 0.8) The weighting for how much the controller should attempt to reach its local goal, also controls speed, maximal possible value is 5.0 
+  gdist_scale: 0.8
+# (bool, default false) Whether or not to publish the cost grid that the planner will use when planning.                    
+  publish_cost_grid_pc: false
+# (double, default: 0.8) How far to look ahead in time in seconds along the simulated trajectory when using heading scoring    
+  heading_scoring_timestep: 1.2
+
+#
+# Oscillation Prevention Parameters
+#
+# (double, default 0.05) How far the robot must travel in meters before oscillation flags are reset
+  oscillation_reset_dist: 0.1
   
   

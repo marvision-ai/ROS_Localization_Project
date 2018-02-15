@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "udacity_bot")
 set(udacity_bot_VERSION "0.0.0")
-set(udacity_bot_MAINTAINER "robond <robond@todo.todo>")
+set(udacity_bot_MAINTAINER "Martin Bufi <mbufi@gmail.com>")
 set(udacity_bot_PACKAGE_FORMAT "2")
 set(udacity_bot_BUILD_DEPENDS )
 set(udacity_bot_BUILD_EXPORT_DEPENDS )
