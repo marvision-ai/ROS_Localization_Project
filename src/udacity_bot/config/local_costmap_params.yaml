@@ -8,8 +8,8 @@ local_costmap:
    global_frame: /odom
    robot_base_frame: robot_footprint
    transform_tolerance: 1.25
-   update_frequency: 50.0              # The frequency in Hz for the map to be updated.
-   publish_frequency: 50.0             # The frequency in Hz for the map to be publish display information.
+   update_frequency: 2.5              # The frequency in Hz for the map to be updated.
+   publish_frequency: 2.5             # The frequency in Hz for the map to be publish display information.
    width: 25.0                         # The width of the local cost map in meters.
    height: 25.0                        # The height of the local cost map in meters.
    resolution: 0.05                    # (double, default 0.05) The resolution of the map in meters/cell.
