@@ -1,0 +1,8 @@
+prefix=/home/robond/ROS_Localization_Project/install
+
+Name: velodyne_description
+Description: Description of velodyne_description
+Version: 1.0.3
+Cflags: 
+Libs: -L/home/robond/ROS_Localization_Project/install/lib 
+Requires: 

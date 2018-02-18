@@ -1,0 +1,8 @@
+prefix=/home/robond/ROS_Localization_Project/install
+
+Name: velodyne_gazebo_plugins
+Description: Description of velodyne_gazebo_plugins
+Version: 1.0.3
+Cflags: -I/home/robond/ROS_Localization_Project/install/include
+Libs: -L/home/robond/ROS_Localization_Project/install/lib -lgazebo_ros_velodyne_laser
+Requires: tf gazebo_ros gazebo_plugins roscpp sensor_msgs

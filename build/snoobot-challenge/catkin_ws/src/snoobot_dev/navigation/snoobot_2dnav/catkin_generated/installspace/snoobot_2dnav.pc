@@ -1,0 +1,8 @@
+prefix=/home/robond/ROS_Localization_Project/install
+
+Name: snoobot_2dnav
+Description: Description of snoobot_2dnav
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/robond/ROS_Localization_Project/install/lib 
+Requires: 

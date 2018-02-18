@@ -1,0 +1,8 @@
+prefix=/home/robond/ROS_Localization_Project/install
+
+Name: snoo_tf_config
+Description: Description of snoo_tf_config
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/robond/ROS_Localization_Project/install/lib 
+Requires: 

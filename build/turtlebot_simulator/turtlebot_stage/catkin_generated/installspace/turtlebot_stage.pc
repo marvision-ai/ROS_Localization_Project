@@ -1,0 +1,8 @@
+prefix=/home/robond/ROS_Localization_Project/install
+
+Name: turtlebot_stage
+Description: Description of turtlebot_stage
+Version: 2.2.3
+Cflags: 
+Libs: -L/home/robond/ROS_Localization_Project/install/lib 
+Requires: 

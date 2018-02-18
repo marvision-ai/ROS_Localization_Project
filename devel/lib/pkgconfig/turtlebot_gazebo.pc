@@ -1,0 +1,8 @@
+prefix=/home/robond/ROS_Localization_Project/devel
+
+Name: turtlebot_gazebo
+Description: Description of turtlebot_gazebo
+Version: 2.2.3
+Cflags: 
+Libs: -L/home/robond/ROS_Localization_Project/devel/lib 
+Requires: 

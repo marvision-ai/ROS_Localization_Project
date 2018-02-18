@@ -1,0 +1,8 @@
+prefix=/home/robond/ROS_Localization_Project/devel
+
+Name: snoobot_description
+Description: Description of snoobot_description
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/robond/ROS_Localization_Project/devel/lib 
+Requires: 
