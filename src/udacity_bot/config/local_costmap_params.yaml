@@ -5,7 +5,7 @@
 #
 
 local_costmap:
-   global_frame: /odom
+   global_frame: odom
    robot_base_frame: robot_footprint
    transform_tolerance: 1.25
    update_frequency: 50.0              # The frequency in Hz for the map to be updated.

@@ -49,7 +49,7 @@ TrajectoryPlannerROS:
 # (double, default: 1.0) The amount of time to forward-simulate trajectories in seconds   
   sim_time: 1.0
 # (double, default 20.0) The frequency at which this controller will be called in Hz. For use with move_base, this means that you only need to set its "controller_frequency" parameter and can safely leave this one unset.             
-  controller_frequency: 2.5
+  controller_frequency: 10.0
 
 
 # 
@@ -71,5 +71,3 @@ TrajectoryPlannerROS:
 #
 # (double, default 0.05) How far the robot must travel in meters before oscillation flags are reset
   oscillation_reset_dist: 0.1
-  
-  

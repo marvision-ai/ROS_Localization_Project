@@ -55,5 +55,3 @@ odom_frame_id: "odom"               # (string, default "odom") Which frame to us
 base_frame_id: "base_link"          # (string, default "base_link") Which frame to use for the robot base
 global_frame_id: "map"              # (string, default "map") The name of the coordinate frame published by the localization system
 tf_broadcast: true                  # (bool, default true) Set this to false to prevent amcl from publishing the transform between the global frame and the odometry frame.
-
-

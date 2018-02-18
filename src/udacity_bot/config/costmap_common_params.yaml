@@ -19,7 +19,7 @@ robot_radius: 0.4
 inflation_radius: 0.6
 
 # The transform_tolerance parameter sets the maximum amount of latency allowed between these transforms. If the tf tree is not updated at this expected rate, the navigation stack stops the robot.
-transform_tolerance: 1.5
+transform_tolerance: 1.25
 
 # Point the cost map to the laser scanner and listen for updates
 observation_sources: laser_scan_sensor
