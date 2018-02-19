@@ -1,8 +1,0 @@
-prefix=/home/robond/ROS_Localization_Project/install
-
-Name: sb_tasks_common
-Description: Description of sb_tasks_common
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/robond/ROS_Localization_Project/install/lib 
-Requires: 

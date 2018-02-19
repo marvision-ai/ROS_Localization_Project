@@ -1,8 +1,0 @@
-prefix=/home/robond/ROS_Localization_Project/install
-
-Name: snoobot_gazebo
-Description: Description of snoobot_gazebo
-Version: 0.0.1
-Cflags: 
-Libs: -L/home/robond/ROS_Localization_Project/install/lib 
-Requires: 

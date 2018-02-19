@@ -1,8 +1,0 @@
-prefix=/home/robond/ROS_Localization_Project/install
-
-Name: urdf_tutorial
-Description: Description of urdf_tutorial
-Version: 0.3.0
-Cflags: 
-Libs: -L/home/robond/ROS_Localization_Project/install/lib 
-Requires: 

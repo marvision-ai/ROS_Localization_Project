@@ -1,8 +1,0 @@
-prefix=/home/robond/ROS_Localization_Project/install
-
-Name: sb_task1_description
-Description: Description of sb_task1_description
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/robond/ROS_Localization_Project/install/lib 
-Requires: 

@@ -1,8 +1,0 @@
-prefix=/home/robond/ROS_Localization_Project/install
-
-Name: snoobot_plugins
-Description: Description of snoobot_plugins
-Version: 0.0.1
-Cflags: -I/home/robond/ROS_Localization_Project/install/include
-Libs: -L/home/robond/ROS_Localization_Project/install/lib 
-Requires: gazebo_plugins gazebo_ros roscpp message_runtime

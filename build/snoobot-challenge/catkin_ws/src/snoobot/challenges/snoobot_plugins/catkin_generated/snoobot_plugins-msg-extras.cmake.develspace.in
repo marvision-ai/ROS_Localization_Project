@@ -1,2 +1,0 @@
-set(snoobot_plugins_MESSAGE_FILES "/home/robond/ROS_Localization_Project/src/snoobot-challenge/catkin_ws/src/snoobot/challenges/snoobot_plugins/msg/sb_task1_colorstate.msg;/home/robond/ROS_Localization_Project/src/snoobot-challenge/catkin_ws/src/snoobot/challenges/snoobot_plugins/msg/sb_task1_answer.msg;/home/robond/ROS_Localization_Project/src/snoobot-challenge/catkin_ws/src/snoobot/challenges/snoobot_plugins/msg/sb_task1_score.msg")
-set(snoobot_plugins_SERVICE_FILES "")

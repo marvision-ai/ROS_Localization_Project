@@ -1,8 +1,0 @@
-prefix=/home/robond/ROS_Localization_Project/install
-
-Name: turtlebot_teleop
-Description: Description of turtlebot_teleop
-Version: 2.4.2
-Cflags: 
-Libs: -L/home/robond/ROS_Localization_Project/install/lib 
-Requires: roscpp geometry_msgs joy
