@@ -18,9 +18,28 @@
     </plugin>
   </gazebo>
 
+  <gazebo reference="chassis">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  <gazebo reference="left_wheel">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="right_wheel">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="torso">
+    <material>Gazebo/Black</material>
+  </gazebo> 
+  <gazebo reference="gripper_pole1">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="gripper_pole2">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+
 
   <gazebo reference="camera">
-    <material>Gazebo/Green</material>
+    <material>Gazebo/Orange</material>
     <sensor type="camera" name="camera1">
       <update_rate>30.0</update_rate>
       <camera name="head">
@@ -38,7 +57,7 @@
       <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
-        <cameraName>udacity_bot/camera1</cameraName>
+        <cameraName>martin_bot/camera1</cameraName>
         <imageTopicName>image_raw</imageTopicName>
         <cameraInfoTopicName>camera_info</cameraInfoTopicName>
         <frameName>camera</frameName>
@@ -83,7 +102,7 @@
         </noise>
       </ray>
       <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
-        <topicName>/udacity_bot/laser/scan</topicName>
+        <topicName>/martin_bot/laser/scan</topicName>
         <frameName>hokuyo</frameName>
       </plugin>
     </sensor>
@@ -91,3 +110,4 @@
 
 
 </robot>
+
