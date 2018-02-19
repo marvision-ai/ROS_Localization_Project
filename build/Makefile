@@ -880,6 +880,97 @@ udacity_bot_genpy/fast:
 	$(MAKE) -f udacity_bot/CMakeFiles/udacity_bot_genpy.dir/build.make udacity_bot/CMakeFiles/udacity_bot_genpy.dir/build
 .PHONY : udacity_bot_genpy/fast
 
+#=============================================================================
+# Target rules for targets named _run_tests_urdf_tutorial_roslaunch-check
+
+# Build rule for target.
+_run_tests_urdf_tutorial_roslaunch-check: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_urdf_tutorial_roslaunch-check
+.PHONY : _run_tests_urdf_tutorial_roslaunch-check
+
+# fast build rule for target.
+_run_tests_urdf_tutorial_roslaunch-check/fast:
+	$(MAKE) -f urdf_tutorial/urdf_tutorial/CMakeFiles/_run_tests_urdf_tutorial_roslaunch-check.dir/build.make urdf_tutorial/urdf_tutorial/CMakeFiles/_run_tests_urdf_tutorial_roslaunch-check.dir/build
+.PHONY : _run_tests_urdf_tutorial_roslaunch-check/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_urdf_tutorial
+
+# Build rule for target.
+_run_tests_urdf_tutorial: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_urdf_tutorial
+.PHONY : _run_tests_urdf_tutorial
+
+# fast build rule for target.
+_run_tests_urdf_tutorial/fast:
+	$(MAKE) -f urdf_tutorial/urdf_tutorial/CMakeFiles/_run_tests_urdf_tutorial.dir/build.make urdf_tutorial/urdf_tutorial/CMakeFiles/_run_tests_urdf_tutorial.dir/build
+.PHONY : _run_tests_urdf_tutorial/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_urdf_tutorial_roslaunch-check_launch
+
+# Build rule for target.
+_run_tests_urdf_tutorial_roslaunch-check_launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_urdf_tutorial_roslaunch-check_launch
+.PHONY : _run_tests_urdf_tutorial_roslaunch-check_launch
+
+# fast build rule for target.
+_run_tests_urdf_tutorial_roslaunch-check_launch/fast:
+	$(MAKE) -f urdf_tutorial/urdf_tutorial/CMakeFiles/_run_tests_urdf_tutorial_roslaunch-check_launch.dir/build.make urdf_tutorial/urdf_tutorial/CMakeFiles/_run_tests_urdf_tutorial_roslaunch-check_launch.dir/build
+.PHONY : _run_tests_urdf_tutorial_roslaunch-check_launch/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_urdf_tutorial
+
+# Build rule for target.
+run_tests_urdf_tutorial: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_urdf_tutorial
+.PHONY : run_tests_urdf_tutorial
+
+# fast build rule for target.
+run_tests_urdf_tutorial/fast:
+	$(MAKE) -f urdf_tutorial/urdf_tutorial/CMakeFiles/run_tests_urdf_tutorial.dir/build.make urdf_tutorial/urdf_tutorial/CMakeFiles/run_tests_urdf_tutorial.dir/build
+.PHONY : run_tests_urdf_tutorial/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_urdf_tutorial_roslaunch-check
+
+# Build rule for target.
+run_tests_urdf_tutorial_roslaunch-check: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_urdf_tutorial_roslaunch-check
+.PHONY : run_tests_urdf_tutorial_roslaunch-check
+
+# fast build rule for target.
+run_tests_urdf_tutorial_roslaunch-check/fast:
+	$(MAKE) -f urdf_tutorial/urdf_tutorial/CMakeFiles/run_tests_urdf_tutorial_roslaunch-check.dir/build.make urdf_tutorial/urdf_tutorial/CMakeFiles/run_tests_urdf_tutorial_roslaunch-check.dir/build
+.PHONY : run_tests_urdf_tutorial_roslaunch-check/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_urdf_tutorial_roslaunch-check_launch
+
+# Build rule for target.
+run_tests_urdf_tutorial_roslaunch-check_launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_urdf_tutorial_roslaunch-check_launch
+.PHONY : run_tests_urdf_tutorial_roslaunch-check_launch
+
+# fast build rule for target.
+run_tests_urdf_tutorial_roslaunch-check_launch/fast:
+	$(MAKE) -f urdf_tutorial/urdf_tutorial/CMakeFiles/run_tests_urdf_tutorial_roslaunch-check_launch.dir/build.make urdf_tutorial/urdf_tutorial/CMakeFiles/run_tests_urdf_tutorial_roslaunch-check_launch.dir/build
+.PHONY : run_tests_urdf_tutorial_roslaunch-check_launch/fast
+
+#=============================================================================
+# Target rules for targets named clean_test_results_urdf_tutorial
+
+# Build rule for target.
+clean_test_results_urdf_tutorial: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results_urdf_tutorial
+.PHONY : clean_test_results_urdf_tutorial
+
+# fast build rule for target.
+clean_test_results_urdf_tutorial/fast:
+	$(MAKE) -f urdf_tutorial/urdf_tutorial/CMakeFiles/clean_test_results_urdf_tutorial.dir/build.make urdf_tutorial/urdf_tutorial/CMakeFiles/clean_test_results_urdf_tutorial.dir/build
+.PHONY : clean_test_results_urdf_tutorial/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -948,6 +1039,13 @@ help:
 	@echo "... roscpp_generate_messages_py"
 	@echo "... udacity_bot_gennodejs"
 	@echo "... udacity_bot_genpy"
+	@echo "... _run_tests_urdf_tutorial_roslaunch-check"
+	@echo "... _run_tests_urdf_tutorial"
+	@echo "... _run_tests_urdf_tutorial_roslaunch-check_launch"
+	@echo "... run_tests_urdf_tutorial"
+	@echo "... run_tests_urdf_tutorial_roslaunch-check"
+	@echo "... run_tests_urdf_tutorial_roslaunch-check_launch"
+	@echo "... clean_test_results_urdf_tutorial"
 .PHONY : help
 
 

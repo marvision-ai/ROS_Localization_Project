@@ -1,0 +1,8 @@
+prefix=/home/robond/ROS_Localization_Project/devel
+
+Name: urdf_sim_tutorial
+Description: Description of urdf_sim_tutorial
+Version: 0.3.0
+Cflags: 
+Libs: -L/home/robond/ROS_Localization_Project/devel/lib 
+Requires: 

@@ -939,6 +939,12 @@ std_msgs_DIR:PATH=/opt/ros/kinetic/share/std_msgs/cmake
 //The directory containing a CMake configuration file for std_srvs.
 std_srvs_DIR:PATH=/opt/ros/kinetic/share/std_srvs/cmake
 
+//Value Computed by CMake
+test_robot_BINARY_DIR:STATIC=/home/robond/ROS_Localization_Project/build/test_robot
+
+//Value Computed by CMake
+test_robot_SOURCE_DIR:STATIC=/home/robond/ROS_Localization_Project/src/test_robot
+
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/kinetic/share/tf2/cmake
 
@@ -1022,6 +1028,18 @@ udacity_bot_SOURCE_DIR:STATIC=/home/robond/ROS_Localization_Project/src/udacity_
 
 //The directory containing a CMake configuration file for urdf.
 urdf_DIR:PATH=/opt/ros/kinetic/share/urdf/cmake
+
+//Value Computed by CMake
+urdf_sim_tutorial_BINARY_DIR:STATIC=/home/robond/ROS_Localization_Project/build/urdf_tutorial/urdf_sim_tutorial
+
+//Value Computed by CMake
+urdf_sim_tutorial_SOURCE_DIR:STATIC=/home/robond/ROS_Localization_Project/src/urdf_tutorial/urdf_sim_tutorial
+
+//Value Computed by CMake
+urdf_tutorial_BINARY_DIR:STATIC=/home/robond/ROS_Localization_Project/build/urdf_tutorial/urdf_tutorial
+
+//Value Computed by CMake
+urdf_tutorial_SOURCE_DIR:STATIC=/home/robond/ROS_Localization_Project/src/urdf_tutorial/urdf_tutorial
 
 //Value Computed by CMake
 velodyne_description_BINARY_DIR:STATIC=/home/robond/ROS_Localization_Project/build/snoobot-challenge/catkin_ws/src/snoobot/robot/velodyne_sensor/velodyne_description
@@ -1197,7 +1215,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

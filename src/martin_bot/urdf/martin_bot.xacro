@@ -2,7 +2,7 @@
 
 <robot name="martin_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:property name="chassissize"       value=".4 .2 .1" />
+  <xacro:property name="chassissize"       value=".4 .4 .1" />
   <xacro:property name="chassispose"       value="0 0 0.1 0 0 0" />
   <xacro:property name="chassisorigin"     value="0.0 0.0 0.06" />
 
@@ -10,55 +10,29 @@
   <xacro:property name="wheellength"       value="0.05" />
   <xacro:property name="leftwheelorigin"   value="0.0  0.0 0.0" />
   <xacro:property name="rightwheelorigin"  value="0.0  0.0 0.0" />
-  <xacro:property name="leftwheelhinge"    value="0 0.15 0" />
-  <xacro:property name="rightwheelhinge"   value="0 -0.15 0" />
+  <xacro:property name="leftwheelhinge"    value="0 0.25 0" />
+  <xacro:property name="rightwheelhinge"   value="0 -0.25 0" />
  
   <xacro:property name="casterradius"      value="0.05" />
   <xacro:property name="frontcasterorigin" value="-0.15 0 -0.05" />
   <xacro:property name="backcasterorigin"  value=" 0.15 0 -0.05" />
 
   <xacro:property name="camerasize"        value="0.05 0.05 0.05" />
+	<xacro:property name="cameraorigin"      value="0.0 0.0 0.0" />
+
+	<xacro:property name="hokuyoorigin"      value="0.0 0.0 0.0" />
 
   <xacro:property name="towerradius"       value="0.1" />
-  <xacro:property name="towerlength"       value="0.3" />
-  <xacro:property name="towerorigin"       value="0.0 0.0 0.06" />
+  <xacro:property name="towerlength"       value="0.2" />
+  <xacro:property name="towerorigin"       value="0.0 0.0 0.1" />
 
-  <xacro:property name="polelen"           value="0.2" />
+  <xacro:property name="polelen"           value="0.3" />
   <xacro:property name="width"             value="0.2" />
 
-  <material name="blue">
-    <color rgba="0.12 0.56 1.0 1"/>
-  </material>
-
-  <material name="turquoise">
-    <color rgba="0.25 0.88 0.82 1"/>
-  </material>
-
-  <material name="yellow">
-    <color rgba="1.0 0.84 0 1"/>
-  </material>
-
-  <material name="purple">
-    <color rgba="0.8 0 0.8 1"/>
-  </material>
-
-  <material name="green">
-    <color rgba="013 0.55 0.13 1"/>
-  </material>
-
-  <material name="red">
-    <color rgba="0.86 0.08 0.24 1"/>
-  </material>
-
-  <material name="black">
-    <color rgba="0 0 0 1"/>
-  </material>
-
-  <material name="white">
-    <color rgba="1 1 1 1"/>
-  </material>
-
   <xacro:include filename="$(find martin_bot)/urdf/martin_bot.gazebo" />
+
+	<!-- Import Rviz colors -->
+  <xacro:include filename="$(find martin_bot)/urdf/materials.xacro" />
 
   <link name="robot_footprint"></link>
 
@@ -93,7 +67,7 @@
       <geometry>
         <box size="${chassissize}"/>
       </geometry>
-      <material name="blue"/>
+      <material name="red"/>
    </visual>
 
     <collision name='towercollision'>
@@ -193,7 +167,7 @@
       <geometry>
         <cylinder radius="${wheelradius}" length="${wheellength}"/>
       </geometry>
-      <material name="yellow"/>
+      <material name="black"/>
     </visual>
   </link>
 
@@ -237,7 +211,7 @@
       <geometry>
         <cylinder radius="${wheelradius}" length="${wheellength}"/>
       </geometry>
-       <material name="yellow"/>
+       <material name="black"/>
    </visual>
   </link>
   <joint type="continuous" name="right_wheel_hinge">
@@ -251,7 +225,7 @@
 
   <link name="camera">
     <collision name='camera_collision'>
-      <origin xyz="0.0 0.0 0.0" rpy=" 0.0 0.0 0.0"/>
+      <origin xyz="${cameraorigin}" rpy=" 0.0 0.0 0.0"/>
       <geometry>
         <box size="${camerasize}"/>
       </geometry>
@@ -276,7 +250,7 @@
       />
     </inertial>
     <visual name='camera_visual'>
-      <origin xyz="0.0 0.0 0.0" rpy=" 0.0 0.0 0.0"/>
+      <origin xyz="${cameraorigin}" rpy=" 0.0 0.0 0.0"/>
       <geometry>
         <box size="${camerasize}"/>
       </geometry>
@@ -295,7 +269,7 @@
 
   <link name="hokuyo">
     <collision name='hokuyo_collision'>
-      <origin xyz="0.0 0.0 0.0" rpy=" 0.0 0.0 0.0"/>
+      <origin xyz="${hokuyoorigin}" rpy=" 0.0 0.0 0.0"/>
       <geometry>
         <box size="0.1 0.1 0.1"/>
       </geometry>
@@ -312,7 +286,7 @@
     </collision>
     <inertial>
       <mass value="0.1"/>
-      <origin xyz="0.0 0.0 0.0" rpy=" 0.0 0.0 0.0"/>
+      <origin xyz="${hokuyoorigin}" rpy=" 0.0 0.0 0.0"/>
       <inertia
           ixx="1e-6" ixy="0" ixz="0"
           iyy="1e-6" iyz="0"
@@ -320,7 +294,7 @@
       />
     </inertial>
     <visual name='hokuyo_visual'>
-      <origin xyz="0.0 0.0 0.0" rpy=" 0.0 0.0 0.0"/>
+      <origin xyz="${hokuyoorigin}" rpy=" 0.0 0.0 0.0"/>
       <geometry>
         <mesh filename="package://martin_bot/meshes/hokuyo.dae"/>
       </geometry>

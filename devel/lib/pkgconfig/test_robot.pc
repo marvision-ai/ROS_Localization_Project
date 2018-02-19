@@ -1,0 +1,8 @@
+prefix=/home/robond/ROS_Localization_Project/devel
+
+Name: test_robot
+Description: Description of test_robot
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/robond/ROS_Localization_Project/devel/lib 
+Requires: 
