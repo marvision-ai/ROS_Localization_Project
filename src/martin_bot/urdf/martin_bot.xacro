@@ -27,7 +27,7 @@
   <xacro:property name="torsolength"       value="0.2" />
   <xacro:property name="torsoorigin"       value="0.0 0.0 0.0" />
 
-  <xacro:property name="polelength"        value="0.3" />
+  <xacro:property name="polelength"        value="0.2" />
   <xacro:property name="width"             value="0.15" />
 
   <xacro:include filename="$(find martin_bot)/urdf/martin_bot.gazebo" />
@@ -337,25 +337,25 @@
     </inertial>
   </xacro:macro>
 
-	<!-- Grippers -->
+	<!-- Gripper1 (left) -->
 
-  <joint name="gripper_extension" type="prismatic">
-		<origin xyz="0.0 0.07 0.08" rpy="0 0 0"/>
+  <joint name="gripper_extension1" type="prismatic">
+		<origin xyz="0.0 0.09 0.08" rpy="0 0 0"/>
     <parent link="torso"/>
-    <child link="gripper_pole"/>
+    <child link="gripper_pole1"/>
     <limit effort="1000.0" lower="-${width*2-.02}" upper="0" velocity="0.5"/>
     <origin rpy="0 0 0" xyz="0 0 0.15"/>
     <limit effort="30" velocity="0.2"/>
     <dynamics damping="1.0" friction="1.0"/>
   </joint>
 
-	<link name="gripper_pole">
+	<link name="gripper_pole1">
     <visual>
       <geometry>
         <cylinder length="${polelength}" radius="0.01"/>
       </geometry>
       <origin xyz="${polelength/2} 0 0" rpy="0 ${pi/2} 0 "/>
-      <material name="green"/>
+      <material name="grey"/>
     </visual>
     <collision>
       <geometry>
@@ -366,19 +366,19 @@
     <xacro:default_inertial mass="0.05"/>
   </link>
 
-  <xacro:macro name="gripper" params="prefix reflect">
-    <joint name="${prefix}_gripper_joint" type="revolute">
+  <xacro:macro name="gripper1" params="prefix reflect">
+    <joint name="${prefix}_gripper_joint1" type="revolute">
       <axis xyz="0 0 ${reflect}"/>
       <limit effort="1000.0" lower="0.0" upper="0.548" velocity="0.5"/>
       <origin rpy="0 0 0" xyz="${polelength} ${reflect*0.01} 0"/>
-      <parent link="gripper_pole"/>
-      <child link="${prefix}_gripper"/>
+      <parent link="gripper_pole1"/>
+      <child link="${prefix}_gripper1"/>
       <limit effort="30" velocity="1.0"/>
       <dynamics damping="0.0" friction="0.0"/>
     </joint>
     
 
-		<link name="${prefix}_gripper">
+		<link name="${prefix}_gripper1">
       <visual>
         <origin rpy="${(reflect-1)/2*pi} 0 0" xyz="0 0 0"/>
         <geometry>
@@ -394,11 +394,11 @@
       <xacro:default_inertial mass="0.05"/>
     </link>
 
-    <joint name="${prefix}_tip_joint" type="fixed">
-      <parent link="${prefix}_gripper"/>
-      <child link="${prefix}_tip"/>
+    <joint name="${prefix}_tip_joint1" type="fixed">
+      <parent link="${prefix}_gripper1"/>
+      <child link="${prefix}_tip1"/>
     </joint>
-    <link name="${prefix}_tip">
+    <link name="${prefix}_tip1">
       <visual>
         <origin rpy="${(reflect-1)/2*pi} 0 0" xyz="0.09137 0.00495 0"/>
         <geometry>
@@ -416,7 +416,87 @@
   </xacro:macro>
 
 
-  <xacro:gripper prefix="left" reflect="1" />
-  <xacro:gripper prefix="right" reflect="-1" />
+<!-- Gripper2 (Right) -->
+
+  <joint name="gripper_extension2" type="prismatic">
+		<origin xyz="0.0 -0.09 0.08" rpy="0 0 0"/>
+    <parent link="torso"/>
+    <child link="gripper_pole2"/>
+    <limit effort="1000.0" lower="-${width*2-.02}" upper="0" velocity="0.5"/>
+    <origin rpy="0 0 0" xyz="0 0 0.15"/>
+    <limit effort="30" velocity="0.2"/>
+    <dynamics damping="1.0" friction="1.0"/>
+  </joint>
+
+	<link name="gripper_pole2">
+    <visual>
+      <geometry>
+        <cylinder length="${polelength}" radius="0.01"/>
+      </geometry>
+      <origin xyz="${polelength/2} 0 0" rpy="0 ${pi/2} 0 "/>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="${polelength}" radius="0.01"/>
+      </geometry>
+      <origin xyz="${polelength/2} 0 0" rpy="0 0 0 "/>
+    </collision>
+    <xacro:default_inertial mass="0.05"/>
+  </link>
+
+  <xacro:macro name="gripper2" params="prefix reflect">
+    <joint name="${prefix}_gripper_joint2" type="revolute">
+      <axis xyz="0 0 ${reflect}"/>
+      <limit effort="1000.0" lower="0.0" upper="0.548" velocity="0.5"/>
+      <origin rpy="0 0 0" xyz="${polelength} ${reflect*0.01} 0"/>
+      <parent link="gripper_pole2"/>
+      <child link="${prefix}_gripper2"/>
+      <limit effort="30" velocity="1.0"/>
+      <dynamics damping="0.0" friction="0.0"/>
+    </joint>
+    
+
+		<link name="${prefix}_gripper2">
+      <visual>
+        <origin rpy="${(reflect-1)/2*pi} 0 0" xyz="0 0 0"/>
+        <geometry>
+          <mesh filename="package://martin_bot/meshes/l_finger.dae"/>
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://martin_bot/meshes/l_finger.dae"/>
+        </geometry>
+        <origin rpy="${(reflect-1)/2*pi} 0 0" xyz="0 0 0"/>
+      </collision>
+      <xacro:default_inertial mass="0.05"/>
+    </link>
+
+    <joint name="${prefix}_tip_joint2" type="fixed">
+      <parent link="${prefix}_gripper2"/>
+      <child link="${prefix}_tip2"/>
+    </joint>
+    <link name="${prefix}_tip2">
+      <visual>
+        <origin rpy="${(reflect-1)/2*pi} 0 0" xyz="0.09137 0.00495 0"/>
+        <geometry>
+          <mesh filename="package://martin_bot/meshes/l_finger_tip.dae"/>
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="package://martin_bot/meshes/l_finger_tip.dae"/>
+        </geometry>
+        <origin rpy="${(reflect-1)/2*pi} 0 0" xyz="0.09137 0.00495 0"/>
+      </collision>
+      <xacro:default_inertial mass="0.05"/>
+    </link>
+  </xacro:macro>
+
+  <xacro:gripper1 prefix="left" reflect="1" />
+  <xacro:gripper1 prefix="right" reflect="-1" />
+	<xacro:gripper2 prefix="left" reflect="1" />
+  <xacro:gripper2 prefix="right" reflect="-1" />
 
 </robot>
