@@ -27,7 +27,7 @@
   <xacro:property name="torsolength"       value="0.2" />
   <xacro:property name="torsoorigin"       value="0.0 0.0 0.0" />
 
-  <xacro:property name="polelength"        value="0.2" />
+  <xacro:property name="polelength"        value="0.1" />
   <xacro:property name="width"             value="0.15" />
 
   <xacro:include filename="$(find martin_bot)/urdf/martin_bot.gazebo" />
@@ -146,7 +146,7 @@
    </visual>
 	</link>
 
-	<joint type="continuous" name="torsolink">
+	<joint name="torsolink" type="fixed">
     <origin xyz="${torsolink}" rpy="0 0 0"/>
     <child link="torso"/>
     <parent link="chassis"/>
@@ -340,7 +340,7 @@
 	<!-- Gripper1 (left) -->
 
   <joint name="gripper_extension1" type="prismatic">
-		<origin xyz="0.0 0.09 0.08" rpy="0 0 0"/>
+		<origin xyz="0.0 0.09 0.07" rpy="0 0 0"/>
     <parent link="torso"/>
     <child link="gripper_pole1"/>
     <limit effort="1000.0" lower="-${width*2-.02}" upper="0" velocity="0.5"/>
@@ -419,7 +419,7 @@
 <!-- Gripper2 (Right) -->
 
   <joint name="gripper_extension2" type="prismatic">
-		<origin xyz="0.0 -0.09 0.08" rpy="0 0 0"/>
+		<origin xyz="0.0 -0.09 0.07" rpy="0 0 0"/>
     <parent link="torso"/>
     <child link="gripper_pole2"/>
     <limit effort="1000.0" lower="-${width*2-.02}" upper="0" velocity="0.5"/>
