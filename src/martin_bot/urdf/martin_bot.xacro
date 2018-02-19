@@ -22,11 +22,11 @@
 
 	<xacro:property name="hokuyoorigin"      value="0.0 0.0 0.0" />
 
-  <xacro:property name="towerradius"       value="0.1" />
-  <xacro:property name="towerlength"       value="0.2" />
-  <xacro:property name="towerorigin"       value="0.0 0.0 0.1" />
+  <xacro:property name="torsoradius"       value="0.1" />
+  <xacro:property name="torsolength"       value="0.2" />
+  <xacro:property name="torsoorigin"       value="0.0 0.0 0.1" />
 
-  <xacro:property name="polelen"           value="0.3" />
+  <xacro:property name="polelength"        value="0.3" />
   <xacro:property name="width"             value="0.2" />
 
   <xacro:include filename="$(find martin_bot)/urdf/martin_bot.gazebo" />
@@ -70,17 +70,17 @@
       <material name="red"/>
    </visual>
 
-    <collision name='towercollision'>
-      <origin xyz="${towerorigin}" rpy=" 0 0 0"/> 
+    <collision name='torsocollision'>
+      <origin xyz="${torsoorigin}" rpy=" 0 0 0"/> 
       <geometry>
-          <cylinder radius="${towerradius}" length="${towerlength}"/>
+          <cylinder radius="${torsoradius}" length="${torsolength}"/>
       </geometry>
     </collision>
 
-    <visual name='tower_visual'>
-      <origin xyz="${towerorigin}" rpy=" 0 0 0"/>
+    <visual name='torso_visual'>
+      <origin xyz="${torsoorigin}" rpy=" 0 0 0"/>
       <geometry>
-          <cylinder radius="${towerradius}" length="${towerlength}"/>
+          <cylinder radius="${torsoradius}" length="${torsolength}"/>
       </geometry>
       <material name="green"/>
    </visual>
@@ -254,7 +254,7 @@
       <geometry>
         <box size="${camerasize}"/>
       </geometry>
-      <material name="turquoise"/>
+      <material name="orange"/>
     </visual>
   </link>
 
@@ -329,16 +329,16 @@
   <link name="gripper_pole">
     <visual>
       <geometry>
-        <cylinder length="${polelen}" radius="0.01"/>
+        <cylinder length="${polelength}" radius="0.01"/>
       </geometry>
-      <origin xyz="${polelen/2} 0 0" rpy="0 ${pi/2} 0 "/>
+      <origin xyz="${polelength/2} 0 0" rpy="0 ${pi/2} 0 "/>
       <material name="green"/>
     </visual>
     <collision>
       <geometry>
-        <cylinder length="${polelen}" radius="0.01"/>
+        <cylinder length="${polelength}" radius="0.01"/>
       </geometry>
-      <origin xyz="${polelen/2} 0 0" rpy="0 0 0 "/>
+      <origin xyz="${polelength/2} 0 0" rpy="0 0 0 "/>
     </collision>
     <xacro:default_inertial mass="0.05"/>
   </link>
@@ -347,7 +347,7 @@
     <joint name="${prefix}_gripper_joint" type="revolute">
       <axis xyz="0 0 ${reflect}"/>
       <limit effort="1000.0" lower="0.0" upper="0.548" velocity="0.5"/>
-      <origin rpy="0 0 0" xyz="${polelen} ${reflect*0.01} 0"/>
+      <origin rpy="0 0 0" xyz="${polelength} ${reflect*0.01} 0"/>
       <parent link="gripper_pole"/>
       <child link="${prefix}_gripper"/>
       <limit effort="30" velocity="1.0"/>

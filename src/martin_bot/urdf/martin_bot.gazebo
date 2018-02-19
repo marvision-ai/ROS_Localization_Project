@@ -27,8 +27,12 @@
   <gazebo reference="right_wheel">
     <material>Gazebo/Black</material>
   </gazebo>
+	<!-- More materials
+	<gazebo reference="torsocollision">
+    <material>Gazebo/Black</material>
+  </gazebo> -->
   <gazebo reference="camera">
-    <material>Gazebo/Turquoise</material>
+    <material>Gazebo/Orange</material>
     <sensor type="camera" name="camera1">
       <update_rate>30.0</update_rate>
       <camera name="head">
