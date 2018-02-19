@@ -11,7 +11,5 @@
 
   <!-- The second node uses the robot_state_publisher package that publishes the robot's state to tf (transform tree).  -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"/>
-  
-
 
 </launch>

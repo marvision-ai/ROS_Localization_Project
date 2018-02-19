@@ -1,0 +1,30 @@
+#
+# The navigation stack uses costmaps to store information about obstacles in the world. 
+# In order to do this properly, we'll need to point the costmaps at the sensor topics they should listen to for updates.
+# http://wiki.ros.org/navigation/Tutorials/RobotSetup
+#
+
+map_type: costmap
+
+obstacle_range: 5.0            # (double, default 2.5) The default maximum distance from the robot at which an obstacle will be inserted into the cost map in meters. This can be over-ridden on a per-sensor basis.
+raytrace_range: 8.0            # (double, default 3.0) The default range in meters at which to raytrace out obstacles from the map using sensor data. the robot will attempt to clear out space in front of it up to N-meters away given a sensor reading. This can be over-ridden on a per-sensor basis.
+
+# Foot print of the robot
+# Here we set either the footprint of the robot or the radius of the robot if it is circular. In the case of specifying the footprint, 
+# the center of the robot is assumed to be at (0.0, 0.0) and both clockwise and counterclockwise specifications are supported. 
+# We'll also set the inflation radius for the costmap. The inflation radius should be set to the maximum distance from obstacles at which a cost should be incurred. 
+# For example, setting the inflation radius at 0.55 meters means that the robot will treat all paths that stay 0.55 meters or more away from obstacles as having equal obstacle cost.
+#footprint: [[x0, y0], [x1, y1], ... [xn, yn]]
+robot_radius: 0.4
+inflation_radius: 0.6
+
+# The transform_tolerance parameter sets the maximum amount of latency allowed between these transforms. If the tf tree is not updated at this expected rate, the navigation stack stops the robot.
+transform_tolerance: 1.25
+
+# Point the cost map to the laser scanner and listen for updates
+observation_sources: laser_scan_sensor
+laser_scan_sensor:   {sensor_frame: hokuyo, data_type: LaserScan, topic: /udacity_bot/laser/scan, marking: true, clearing: true}
+
+
+# iF you were using Point cloud data ...
+#point_cloud_sensor: {sensor_frame: frame_name, data_type: PointCloud, topic: topic_name, marking: true, clearing: true}

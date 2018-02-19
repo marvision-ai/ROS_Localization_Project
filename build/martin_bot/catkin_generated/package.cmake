@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "martin_bot")
 set(martin_bot_VERSION "0.0.0")
-set(martin_bot_MAINTAINER "robond <robond@todo.todo>")
+set(martin_bot_MAINTAINER "Martin Bufi <mbufi1992@gmail.com>")
 set(martin_bot_PACKAGE_FORMAT "2")
 set(martin_bot_BUILD_DEPENDS )
 set(martin_bot_BUILD_EXPORT_DEPENDS )

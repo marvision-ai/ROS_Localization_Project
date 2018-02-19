@@ -10,8 +10,8 @@
   <arg name="debug" default="false"/>
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find martin_bot)/worlds/udacity.world"/>
-    <!--<arg name="world_name" value="$(find udacity_bot)/worlds/jackal_race.world"/> -->
+    <!--<arg name="world_name" value="$(find martin_bot)/worlds/udacity.world"/> -->
+		<arg name="world_name" value="$(find udacity_bot)/worlds/jackal_race.world"/>
     <arg name="paused" value="$(arg paused)"/>
     <arg name="use_sim_time" value="$(arg use_sim_time)"/>
     <arg name="gui" value="$(arg gui)"/>
@@ -23,13 +23,10 @@
   <include file="$(find martin_bot)/launch/robot_description.launch"/>
 
   <!-- (spawn a robot in gazebo world) -->
-
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false"
         output="screen" args="-urdf -param robot_description -model martin_bot"/>
 
-  <!--launch rviz
+  <!--launch rviz -->
   <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find udacity_bot)/launch/Rvizconfig.rviz"/>
-
--->
 
 </launch>

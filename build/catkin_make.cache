@@ -1,2 +1,2 @@
-martin_bot:udacity_bot:urdf_tutorial/urdf_sim_tutorial:urdf_tutorial/urdf_tutorial
+martin_bot:udacity_bot
 -DCATKIN_DEVEL_PREFIX=/home/robond/ROS_Localization_Project/devel -DCMAKE_INSTALL_PREFIX=/home/robond/ROS_Localization_Project/install -G Unix Makefiles

@@ -119,8 +119,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/robond/ROS_Localization_Project/build/gtest/cmake_install.cmake")
   include("/home/robond/ROS_Localization_Project/build/martin_bot/cmake_install.cmake")
   include("/home/robond/ROS_Localization_Project/build/udacity_bot/cmake_install.cmake")
-  include("/home/robond/ROS_Localization_Project/build/urdf_tutorial/urdf_sim_tutorial/cmake_install.cmake")
-  include("/home/robond/ROS_Localization_Project/build/urdf_tutorial/urdf_tutorial/cmake_install.cmake")
 
 endif()
 
