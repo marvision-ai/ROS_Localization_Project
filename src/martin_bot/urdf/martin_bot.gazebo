@@ -27,10 +27,10 @@
   <gazebo reference="right_wheel">
     <material>Gazebo/Black</material>
   </gazebo>
-	<!-- More materials
-	<gazebo reference="torsocollision">
+	<!-- More materials -->
+	<gazebo reference="torso">
     <material>Gazebo/Black</material>
-  </gazebo> -->
+  </gazebo> 
   <gazebo reference="camera">
     <material>Gazebo/Orange</material>
     <sensor type="camera" name="camera1">

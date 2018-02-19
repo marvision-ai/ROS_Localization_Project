@@ -4,14 +4,14 @@
 
   <xacro:property name="chassissize"       value=".4 .4 .1" />
   <xacro:property name="chassispose"       value="0 0 0.1 0 0 0" />
-  <xacro:property name="chassisorigin"     value="0.0 0.0 0.06" />
+  <xacro:property name="chassisorigin"     value="0.0 0.0 0.0" />
 
   <xacro:property name="wheelradius"       value="0.1" />
   <xacro:property name="wheellength"       value="0.05" />
   <xacro:property name="leftwheelorigin"   value="0.0  0.0 0.0" />
   <xacro:property name="rightwheelorigin"  value="0.0  0.0 0.0" />
-  <xacro:property name="leftwheelhinge"    value="0 0.25 0" />
-  <xacro:property name="rightwheelhinge"   value="0 -0.25 0" />
+  <xacro:property name="leftwheelhinge"    value="0 0.23 0" />
+  <xacro:property name="rightwheelhinge"   value="0 -0.23 0" />
  
   <xacro:property name="casterradius"      value="0.05" />
   <xacro:property name="frontcasterorigin" value="-0.15 0 -0.05" />
@@ -24,7 +24,8 @@
 
   <xacro:property name="torsoradius"       value="0.1" />
   <xacro:property name="torsolength"       value="0.2" />
-  <xacro:property name="torsoorigin"       value="0.0 0.0 0.1" />
+  <xacro:property name="torsoorigin"       value="0.0 0.0 0.0" />
+  <xacro:property name="torsolink"         value="0.0 0.0 0.1" />
 
   <xacro:property name="polelength"        value="0.3" />
   <xacro:property name="width"             value="0.2" />
@@ -69,22 +70,6 @@
       </geometry>
       <material name="red"/>
    </visual>
-
-    <collision name='torsocollision'>
-      <origin xyz="${torsoorigin}" rpy=" 0 0 0"/> 
-      <geometry>
-          <cylinder radius="${torsoradius}" length="${torsolength}"/>
-      </geometry>
-    </collision>
-
-    <visual name='torso_visual'>
-      <origin xyz="${torsoorigin}" rpy=" 0 0 0"/>
-      <geometry>
-          <cylinder radius="${torsoradius}" length="${torsolength}"/>
-      </geometry>
-      <material name="green"/>
-   </visual>
-
 
     <collision name='back_caster_collision'>
       <origin xyz="${backcasterorigin}" rpy=" 0 0 0"/>
@@ -135,6 +120,44 @@
     </visual>
 
   </link>
+
+	<link name="torso">
+	 <collision name='torsocollision'>
+      <origin xyz="${torsoorigin}" rpy=" 0 0 0"/> 
+      <geometry>
+          <cylinder radius="${torsoradius}" length="${torsolength}"/>
+      </geometry>
+    </collision>
+		 <inertial>
+      <mass value="5.0"/>
+      <origin xyz="${torsoorigin}" rpy=" 0 0 0"/>
+      <inertia
+          ixx="0.1" ixy="0" ixz="0"
+          iyy="0.1" iyz="0"
+          izz="0.1"
+      />
+    </inertial>
+    <visual name='torso_visual'>
+      <origin xyz="${torsoorigin}" rpy=" 0 0 0"/>
+      <geometry>
+          <cylinder radius="${torsoradius}" length="${torsolength}"/>
+      </geometry>
+      <material name="black"/>
+   </visual>
+	</link>
+
+	<joint type="continuous" name="torsolink">
+    <origin xyz="${torsolink}" rpy="0 0 0"/>
+    <child link="torso"/>
+    <parent link="chassis"/>
+    <axis xyz="0 0 1" rpy="0 0 0"/>
+    <limit effort="10000" velocity="1000"/>
+    <joint_properties damping="1.0" friction="1.0"/>
+  </joint>
+
+
+
+
 
   <link name="left_wheel">
     <collision name='left_wheel_collision'>
