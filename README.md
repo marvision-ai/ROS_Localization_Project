@@ -18,6 +18,7 @@ or
 `$ roslaunch martin_bot udacity_world.launch`
 
 
+
 **Terminal 2:**
 
 `$ roslaunch udacity_bot acml.launch`
@@ -25,6 +26,7 @@ or
 or 
 
 `$ roslaunch martin_bot acml.launch`
+
 
 
 **Terminal 3:**
