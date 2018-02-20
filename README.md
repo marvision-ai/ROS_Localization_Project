@@ -3,7 +3,7 @@ RoboND Term2 Localization Project
 
 Please read the [PDF](http://github.com/mbufi) for the project write up.
 
-To run the code: Open 3 terminals. Remember to source! 
+To run the code: **Open 3 terminals. (Remember to source!)**
 
 `$ souce devel/setup.bash`
 
