@@ -1,7 +1,7 @@
 # ROS_Localization_Project
 RoboND Term2 Localization Project 
 
-Please read the [PDF](http://github.com/mbufi) for the project write up.
+Please read the [PDF](https://github.com/mbufi/ROS_Localization_Project/blob/master/ROS_Localization_report.pdf) for the project write up.
 
 To run the code: **Open 3 terminals. (Remember to source!)**
 
